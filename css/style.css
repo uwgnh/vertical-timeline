@@ -277,13 +277,13 @@ font-size: 40px;
   .cd-timeline-content {
     margin-left: 0;
     padding: 1.6em;
-    width: 45%;
+    width: 40%;
   }
   .cd-timeline-content::before {
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: white;
+    border-left-color: #f0e6c8;
   }
   .cd-timeline-content .cd-read-more {
     float: left;
