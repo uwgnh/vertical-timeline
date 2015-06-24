@@ -3,38 +3,17 @@
 Primary style
 
 -------------------------------- */
-html * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
+#cd-timeline body {
   font-size: 100%;
-  font-family: "Droid Serif", serif;
   color: #7f8c97;
   background-color: #e9f0f5;
 }
 
-a {
-  color: #acb7c0;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-}
-
-img {
+#cd-timeline img {
   max-width: 100%;
 }
 
-h1, h2 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-}
 
 /* -------------------------------- 
 
@@ -44,7 +23,7 @@ Modules - reusable parts of our design
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
-  max-width: 1170px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .cd-container::after {
@@ -59,27 +38,6 @@ Modules - reusable parts of our design
 Main components 
 
 -------------------------------- */
-header {
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  background: #303e49;
-}
-header h1 {
-  color: white;
-  font-size: 18px;
-  font-size: 1.125rem;
-}
-@media only screen and (min-width: 1170px) {
-  header {
-    height: 300px;
-    line-height: 300px;
-  }
-  header h1 {
-    font-size: 24px;
-    font-size: 1.5rem;
-  }
-}
 
 #cd-timeline {
   position: relative;
@@ -94,8 +52,8 @@ header h1 {
   top: 0;
   left: 18px;
   height: 100%;
-  width: 4px;
-  background: #d7e4ed;
+  width: 6px;
+  background: #969696;
 }
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
@@ -154,16 +112,16 @@ header h1 {
   margin-left: -12px;
   margin-top: -12px;
 }
-.cd-timeline-img.cd-picture {
-  background: #75ce66;
+.cd-timeline-img.cd-heart {
+  background: #fe230a;
 }
-.cd-timeline-img.cd-movie {
-  background: #c03b44;
+.cd-timeline-img.cd-hand {
+  background: #ff9600;
 }
-.cd-timeline-img.cd-location {
-  background: #f0ca45;
+.cd-timeline-img.cd-network {
+  background: #10167f;
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 900px) {
   .cd-timeline-img {
     width: 60px;
     height: 60px;
@@ -244,10 +202,10 @@ header h1 {
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: white;
+  background:  #f0e6c8;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #d7e4ed;
+  box-shadow: 0 3px 2px  #969696;
 }
 .cd-timeline-content:after {
   content: "";
@@ -257,10 +215,18 @@ header h1 {
 .cd-timeline-content h2 {
   color: #303e49;
 }
-.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+.cd-timeline-content p, .cd-timeline-content .cd-read-more {
   font-size: 13px;
   font-size: 0.8125rem;
 }
+
+.cd-timeline-content .cd-date
+{
+  top: -20px;
+font-size: 40px;
+}
+
+
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
 }
@@ -303,11 +269,11 @@ header h1 {
     font-size: 1rem;
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 40px;
+    top:-20px;
   }
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 900px) {
   .cd-timeline-content {
     margin-left: 0;
     padding: 1.6em;
@@ -326,9 +292,9 @@ header h1 {
     position: absolute;
     width: 100%;
     left: 122%;
-    top: 6px;
+    top: -20px;
     font-size: 16px;
-    font-size: 1rem;
+    font-size: 40px;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
@@ -480,4 +446,6 @@ header h1 {
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
 }
